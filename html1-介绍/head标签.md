@@ -96,11 +96,20 @@ or
 <!-- basic favicon -->
 <link rel="shortcut icon" href="https://developer.mozilla.org/static/img/favicon32.7f3da72dcea1.png">
 ```
+这些注释解释了每个图标的用途 - 这些元素涵盖的东西提供一个高分辨率图标，这些高分辨率图标当网站保存到iPad的主屏幕时使用。
 
-
-
-
-
+#### 在HTML中应用CSS和JavaScript
+如今，几乎你使用的所有网站都会使用 CSS 让网页更加炫酷，使用JavaScript让网页有交互功能，比如视频播放器，地图，游戏以及更多功能。这些应用在网页中很常见，它们分别使用`<link>`元素以及`<script>`元素。
+- `<link>`元素经常位于文档的头部。这个link元素有2个属性，`rel="stylesheet"`表明这是`文档的样式表`，而`href`包含了`样式表文件的路径`
+```
+<link rel="stylesheet" href="my-css-file.css">
+```
+- `<script>`部分没必要非要放在文档头部；实际上，把它放在文档的尾部（在`</body>`标签之前）是一个更好的选择，这样可以确保在加载脚本之前浏览器已经解析了HTML内容（如果脚本加载某个不存在的元素，浏览器会报错）。
+```
+<script src="my-js-file.js"></script>
+```
+注意:`<script>`元素看起来像一个空元素，但它并不是，因此需要一个结束标记。您还可以选择将脚本放入`<script>`元素中，而不是指向外部脚本文件。
+##### 实践操作:在网页中应用CSS和JavaScript
 
 
 
