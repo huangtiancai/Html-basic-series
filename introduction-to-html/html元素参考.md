@@ -167,3 +167,14 @@
 元素|描述
 ---|----
 `<iframe>`|HTML内联框架元素`<iframe>`表示嵌套的浏览上下文，有效地将另一个HTML页面嵌入到当前页面中。
+### 脚本
+为了创建动态内容和web应用程序,HTML支持使用脚本语JavaScript
+元素|描述
+---|----
+`<canvas>`|`<canvas>`元素可被用来通过脚本（通常是JavaScript）绘制图形。比如,它可以被用来绘制图形,制作图片集合,甚至用来实现动画效果。你可以(也应该)在元素标签内写入可提供替代的的代码内容，这些内容将会在在旧的、不支持`<canvas>`元素的浏览器或是禁用了JavaScript的浏览器内渲染并展现。
+`<script>`|HTML`<script>`元素用于嵌入或引用可执行脚本。
+
+
+- `<canvas>`: [Cancas API 参考教程](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API)
+
+

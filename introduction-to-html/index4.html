@@ -18,12 +18,25 @@
     </div>
 
     <iframe     
-        src="http://149.129.77.73:8080/webgis/3D.html" 
+        src="http://149.129.77.73:8080/webgis/3D.ht" 
         title="iframe example 1" 
         width="400" 
         height="300">
         <p>Your browser does not support iframes.</p>
       </iframe>
+    </br>
+
+    <!-- Cancas示例 -->
+    <canvas id="canvas" width="300" height="300">  
+    </canvas>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'blue';
+        //           左  上  宽   高
+        ctx.fillRect(100,20,200,200);
+    </script>
 
 </body>
 </html>
