@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="htc">
+    <title>为表格中的列提供共同的样式</title>
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(200,200,200);
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+        td, th {
+             border: 1px solid rgb(190,190,190);
+             padding: 10px 20px;
+        }
+        td {
+             text-align: center;
+        }
+        caption {
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <colgroup>
+            <col>
+            <col style="background-color: yellow" >
+        </colgroup>
+        <tr>
+            <th>Person</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Tom</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>cat</td>
+            <td>20</td>
+        </tr>   
+    </table>
+
+    
+
+</body>
+</html>
