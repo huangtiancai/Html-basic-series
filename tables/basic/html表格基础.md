@@ -199,3 +199,6 @@ HTML有一种方法可以定义整列数据的样式信息：就是 `<col>` 和 
 </table>
 
 #### 动手练习: colgroup and col
+
+
+HTML表格高级 参考：[HTML表格高级特性和可访问性](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Tables/Advanced)
