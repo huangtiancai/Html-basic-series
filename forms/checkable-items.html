@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="htc">
+    <title>checkbox和radio</title>
+    <link href="" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Choose all the vegetables you like to eat</legend>
+            <ul>
+                <li>
+                    <label for="carrots">Carrots</label>
+                    <input type="checkbox" id="carrots" name="carrots" value="carrots">
+                </li>
+                <li>
+                    <label for="Peas">Peas</label>
+                    <input type="checkbox" id="Peas" name="Peas" value="Peas">
+                </li>
+                <li>
+                    <label for="cabbage">Cabbage</label>
+                    <input type="checkbox" id="cabbage" name="cabbage" value="cabbage">
+                </li>
+                <li>
+                    <label for="cauliflower">Cauliflower</label>
+                    <input type="checkbox" id="cauliflower" name="cauliflower" value="cauliflower">
+                </li>
+                <li>
+                    <label for="broccoli ">Broccoli</label>
+                    <input type="checkbox" id="broccoli" name="broccoli" value="broccoli">
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>What is your favorite meal?-几个单选按钮可以连接在一起。如果它们的name属性共享相同的值，那么它们将被认为属于同一组的按钮。同一组中只有一个按钮可以同时被选</legend>
+            <ul>
+                <li>
+                    <label for="soup">Soup</label>
+                    <input type="radio" id="soup" name="meal" value="soup">
+                </li>
+                <li>
+                    <label for="curry">Curry</label>
+                    <input type="radio" id="curry" name="meal" value="curry">
+                </li>
+                <li>
+                    <label for="pizza">Pizza</label>
+                    <input type="radio" id="pizza" name="meal" value="pizza">
+                </li>
+                <li>
+                    <label for="tacos">Tacos</label>
+                    <input type="radio" id="tacos" name="meal" value="tacos">
+                </li>
+                <li>
+                    <label for="bolognaise ">Bolognaise</label>
+                    <input type="radio" id="bolognaise" name="meal" value="bolognaise">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+
+
+
+    <fieldset>
+        <legend>选中取消演示</legend>
+        <input type="checkbox"><br>
+        <input type="radio">
+    </fieldset>
+    
+    <fieldset>
+        <legend>每个checkbox的name属性值都不一样</legend>
+        <input type="checkbox" name="cb1" value="">苹果<br>
+        <input type="checkbox" name="cb2" value="">香蕉<br>
+        <input type="checkbox" name="cb3" value="">梨子<br>
+    </fieldset>
+
+    <fieldset>
+        <legend>每个checkbox的name属性值都一样</legend>
+        <input type="checkbox" name="cb1" value="">苹果<br>
+        <input type="checkbox" name="cb1" value="">香蕉<br>
+        <input type="checkbox" name="cb1" value="">梨子<br>
+    </fieldset>
+
+    <fieldset>
+        <legend>每个radio都没有设置name的属性值（默认情况）</legend>
+        <input type="radio" value="">苹果<br>
+        <input type="radio" value="">香蕉<br>
+        <input type="radio" value="">梨子<br>
+    </fieldset>
+
+    <fieldset>
+        <legend>每个radio的name的属性值都不一样</legend>
+        <input type="radio" name="r1" value="">苹果<br>
+        <input type="radio" name="r2" value="">香蕉<br>
+        <input type="radio" name="r3" value="">梨子<br>
+    </fieldset>
+
+    <fieldset>
+        <legend>每个radio的name的属性值都不一样</legend>
+        <input type="radio" name="r1" value="">苹果<br>
+        <input type="radio" name="r1" value="">香蕉<br>
+        <input type="radio" name="r1" value="">梨子<br>
+    </fieldset>
+
+</body>
+</html>

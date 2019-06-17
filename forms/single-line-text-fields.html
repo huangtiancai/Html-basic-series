@@ -8,6 +8,7 @@
 
 </head>
 <body>
+    <h1>单行文本域</h1>
     <form>
         <p>
             <label for="comment">Add a comment:</label>
@@ -43,10 +44,64 @@
         </p>
         <p>
             <button type="submit">Submit me!</button>
-        </p>     
+        </p> 
+        
+        <h2>多行文本域</h2>
         <p>
             <textarea rows="5" cols="100" wrap="soft"></textarea>
         </p>
     </form>
+
+    <h1>下拉框</h1>
+    <select id="simple" name="simple">
+        <option>可口可乐</option>
+        <option selected>美年达</option>
+        <option>果粒橙</option>
+    </select>
+
+    <select id="groups" name="groups">
+        <optgroup label="drink">
+            <option>可口可乐</option>
+            <option selected>美年达</option>
+            <option>果粒橙</option>
+        </optgroup>
+        <optgroup label="fruit">
+            <option>banana</option>
+            <option>apple</option>
+            <option>lemon</option>
+        </optgroup>
+        <optgroup label="vegetables">
+            <option>carrot</option>
+            <option>Eggplant</option>
+            <option>Potato</option>
+        </optgroup>
+    </select>
+
+    <h1>多选选择框</h1>
+    <select multiple id="simple" name="simple">
+        <option>可口可乐</option>
+        <option >美年达</option>
+        <option>果粒橙</option>
+    </select>
+
+    <h1>自动补全输入框</h1>
+    <label for="myFruit"></label>
+    <input type="text" id="myFruit" name="myFruit" list="mySuggestion">
+    <datalist id="mySuggestion">
+        <option>Apple</option>
+        <option>Banana</option>
+        <option>Blackberry</option>
+        <option>Blueberry</option>
+        <option>Lemon</option>
+        <option>Lychee</option>
+        <option>Peach</option>
+        <option>Pear</option>
+    </datalist>
+
+    <h1>复选框</h1>
+    <input type="checkbox" id="carrots" name="carrots" value="carrots">
+    <input type="radio" id="soup" name="meal">
+
+
 </body>
 </html>

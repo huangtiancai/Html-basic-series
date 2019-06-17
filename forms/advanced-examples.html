@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="htc">
+    <title>高级表单部件</title>
+    <link href="" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <form>
+        <p>
+            <label for="age">数字:</label>
+            <input type="number" id="age" name="age" min="10" max="100" step="2">
+        </p>
+        <p>
+            <label for="beans">滑块:</label>
+            <input type="range" name="beans" id="beans" min="0" max="100" step="10"> 
+            <span class="beancount"></span>
+        </p>
+        <p>
+            <labe for="datetime-local">本地时间datetime-local:</labe>
+            <input type="datetime-local" name="datetime-local" id="datetime-local">
+        </p>
+        <p>
+            <label for="datetime">时间datetime:</label>
+            <input type="datetime" name="datetime" id="datetime">
+        </p>
+        <p>
+            <label for="date">时间date-有时间范围:</label>
+            <input type="date" name="date" id="date">
+        </p>
+        <p>
+            <label for="date">时间date:</label>
+            <input type="date" name="date" id="date" min="2019-05-10" max="2019-07-21">
+        </p>
+        <p>
+            <label for="month">月:</label>
+            <input type="month" name="month" id="month">
+        </p>
+        <p>
+            <label for="time">时间:</label>
+            <input type="time" name="time" id="time">
+        </p>
+        <p>
+            <label for="week">星期:</label>
+            <input type="week" name="week" id="week">
+        </p>
+        <p>
+            <label>拾色器:</label>
+            <input type="color" name="color" id="color">
+        </p>
+
+    </form>
+    
+    
+      
+    
+
+    <script>
+        var beans = document.querySelector("#beans");
+        var beancount = document.querySelector(".beancount");
+
+        beancount.textContent = beans.value;
+
+        beans.oninput = function(){
+            beancount.textContent = beans.value;
+        }
+
+    </script>
+</body>
+</html>
