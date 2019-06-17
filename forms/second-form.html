@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="htc">
+    <title>fieldset and legend example</title>
+    <style>
+        
+    </style>
+
+</head>
+<body>
+    <form>
+        <fieldset>
+            <lengend>Fruit juice size</lengend>
+            <p>
+                <input type="radio" name="size" id="size_1" value="small">
+                <label for="size_1">Smalll</label>
+            </p>
+            <p>
+                <input type="radio" name="size" id="size_2" value="medium">
+                <label for="size_2">Medium</label>
+            </p>
+            <p>
+                <input type="radio" name="size" id="size_3" value="large">
+                <label for="size_3">Large</label>
+            </p>
+        </fieldset>
+    </form>
+
+    <label for="name">Name:</label><input type="text" id="name" name="user_name">
+    <label for="name">
+        Name:<input type="text" id="name" name="user_name">
+    </label>
+
+    <form>
+        <p>
+            <label for="taste_1">I like cherry</label>
+            <input type="checkbox" id="taste_1" name="taste_cherry" value="1">
+        </p>
+        <p>
+            <label for="taste_2">I like banana</label>
+            <input type="checkbox" id="taste_2" name="taste_banana" value="2">
+        </p>
+    </form>
+
+    <!--多个标签-->
+    <div>
+        <label for="username">Name:</label>
+        <input type="text" name="username">
+        <label for="username"><abbr title="required">*</abbr></label>
+    </div>
+    <div>
+        <label for="username">
+            <span>Name:</span>
+            <input type="text" name="username">
+            <abbr title="required">*</abbr>
+        </label>
+    </div>
+    <!-- But this is probably best: -->
+    <div>
+        <label for="username">Name:<abbr title="required">*</abbr>
+            <input type="text" name="username">  
+        </label>
+    </div>
+
+</body>
+</html>

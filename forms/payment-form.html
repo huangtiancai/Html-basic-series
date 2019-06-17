@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="htc">
+    <title>Payment form</title>
+    <link href="payment-form.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <!-- action 属性定义了在提交表单时,应该把所收集的数据送给谁(/那个模块)(URL)去处理。
+         method 属性定义了发送数据的HTTP方法(它可以是“get”或“post”).
+    -->
+    
+    
+    <form action="/my-handling-form-page" method="POST">
+        <h1>Payment form</h1>
+        <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+        
+        <section>
+            <h2>Contact information</h2>
+            <fieldset>
+                <lengend>Title</lengend>
+                <ul>
+                    <li>
+                        <label for="title_1">
+                            <input type="radio" id="title_1" value="M.">
+                            Mister
+                        </label>
+                    </li>
+                    <li>
+                        <label for="title_2">
+                            <input type="radio" id="title_2" value="Ms.">
+                            Miss
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+            <p>
+                <label for="name">
+                    <span>Name:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="text" id="name" name="username">
+            </p>
+            <p>
+                <label for="mail">
+                    <span>E-mail:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="email" id="mail" name="usermail">
+            </p>
+            <p>
+                <label for="pwd">
+                    <span>Password:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="password" id="pwd" name="password">
+            </p>
+        </section>  
+        
+        <section>
+            <h2>Payment information</h2>
+            <P>
+                <label for="card">
+                    <span>Card type:</span>
+                </label>
+                <select id="card" name="usercard">
+                    <option value="visa">Visa</option>
+                    <option value="mx">Mastercard</option>
+                    <option value="amex">American Express</option>
+                </select>
+            </P>
+            <P>
+                <label for="number">
+                    <span>Card number:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="text" id="number" name="cardnumber">
+            </P>
+            <P>
+                <label for="date">
+                    <span>Expiration date:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                    <em>formatted as mm/yy</em>
+                </label>
+                <input type="date" id="date" name="expiration">
+            </P>
+        </section>
+
+        <p>
+            <button type="submit">Validate the payment</button>
+        </p>
+    </form>
+</body>
+</html>

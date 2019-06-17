@@ -73,6 +73,157 @@
 ```
 
 
+### `<fieldset>`和`<legend>`元素
+`<fieldset>`元素是一种方便的用于`创建具有相同目的的小部件组`的方式，出于样式和语义目的。
+ 你可以在`<fieldset>`开口标签后加上一个 `<legend>`元素来给`<fieldset>`标上标签。 `<legend>`的文本内容正式地描述`<fieldset>`的用途。它是包含在`<fieldset>`里的。
+ 1. `<label>`元素
+ ```
+ <label for="name">Name:</label><input type="text" id="name" name="user_name">
+ ```
+ 通过他们各自的`for`属性和`id`属性，`<label>`标签与`<input>`正确相关联。如此，一个屏幕阅读器会读出诸如`Name, edit text`之类的东西。
+如果标签没有正确设置，屏幕阅读器只会读出`Edit text blank`之类的东西，这不太有帮助。
+注意，一个小部件可以嵌套在它的`<label>`元素中，就像这样：
+```
+<label for="name">
+    Name:<input type="text" id="name" name="user_name">
+</label>
+```
+
+2. 标签也可点击(点击标签也可以选中)
+`正确设置标签`的另一个好处是可以在所有浏览器中`单击标签来激活相应的小部件`。这对于像文本输入这样的例子很有用，在这里你可以点击标签和输入来聚焦它，它同样对于`单选按钮和复选框`特别有用
+
+
+3. 多个标签
+严格地说，您可以在一个小部件上放置多个标签，在多个标签的情况下，您应该将一个小部件和它的标签嵌套在一个`<label>`元素中。
+```
+<div>
+    <label for="username">Name:</label>
+    <input type="text" name="username">
+    <label for="username"><abbr title="required">*</abbr></label>
+</div>
+<div>
+    <label for="username">
+        <span>Name:</span>
+        <input type="text" name="username">
+        <abbr title="required">*</abbr>
+    </label>
+</div>
+<div>
+    <label for="username">Name:<abbr title="required">*</abbr>
+        <input type="text" name="username">  
+    </label>
+</div>
+```
+### 用于表单的通用HTML结构
+`<div>`,`<p>`,`<filedset>`,HTML标题:`<h1>`,`<h2>`..,分段`<section>`.....
+构建一个表单结构:建立一个稍微复杂一点的表单结构——一个`支付表单`
+```
+<form action="/my-handling-form-page" method="POST">
+    <h1>Payment form</h1>
+    <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+    
+    <section>
+        <h2>Contact information</h2>
+        <fieldset>
+            <lengend>Title</lengend>
+            <ul>
+                <li>
+                    <label for="title_1">
+                        <input type="radio" id="title_1" value="M.">
+                        Mister
+                    </label>
+                </li>
+                <li>
+                    <label for="title_2">
+                        <input type="radio" id="title_2" value="Ms.">
+                        Miss
+                    </label>
+                </li>
+            </ul>
+        </fieldset>
+        <p>
+            <label for="name">
+                <span>Name:</span>
+                <strong><abbr title="required">*</abbr></strong>
+            </label>
+            <input type="text" id="name" name="username">
+        </p>
+        <p>
+            <label for="mail">
+                <span>E-mail:</span>
+                <strong><abbr title="required">*</abbr></strong>
+            </label>
+            <input type="email" id="mail" name="usermail">
+        </p>
+        <p>
+            <label for="pwd">
+                <span>Password:</span>
+                <strong><abbr title="required">*</abbr></strong>
+            </label>
+            <input type="password" id="pwd" name="password">
+        </p>
+    </section>  
+    
+    <section>
+        <h2>Payment information</h2>
+        <P>
+            <label for="card">
+                <span>Card type:</span>
+            </label>
+            <select id="card" name="usercard">
+                <option value="visa">Visa</option>
+                <option value="mx">Mastercard</option>
+                <option value="amex">American Express</option>
+            </select>
+        </P>
+        <P>
+            <label for="number">
+                <span>Card number:</span>
+                <strong><abbr title="required">*</abbr></strong>
+            </label>
+            <input type="text" id="number" name="cardnumber">
+        </P>
+        <P>
+            <label for="date">
+                <span>Expiration date:</span>
+                <strong><abbr title="required">*</abbr></strong>
+                <em>formatted as mm/yy</em>
+            </label>
+            <input type="date" id="date" name="expiration">
+        </P>
+    </section>
+
+    <p>
+        <button type="submit">Validate the payment</button>
+    </p>
+</form>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
