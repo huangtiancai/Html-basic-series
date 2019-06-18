@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="htc">
+    <title>发送表单数据</title>
+    <link href="" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <form action="http://foo.com" method="get">
+        <div>
+            <label for="username">用户名：</label>
+            <input name="username" id="username">
+        </div>
+        <div>
+            <label for="password">密码：</label>
+            <input name="password" id="password">
+        </div>
+        <div>
+            <button>提交</button>
+        </div>
+    </form>
+
+    <form action="post" enctype="multipart/form-data">
+        <div>
+            <label for="file"></label>
+            <input type="file" id="file" name="myFile">
+        </div>
+        <div>
+            <button>发送文件</button>
+        </div>
+    </form>
+</body>
+</html>

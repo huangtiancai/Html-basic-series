@@ -50,6 +50,43 @@
             <label>拾色器:</label>
             <input type="color" name="color" id="color">
         </p>
+        <p>
+            <label for="file">请上传文件：</label>
+            <input type="file" name="file" id="file">
+        </p>
+        <p>
+            <label for="file">请上传文件（可以上传多个文件）：</label>
+            <input type="file" name="file" id="file"  multiple>
+        </p>
+        <p>
+            <label for="file">请上传文件（只能上传图片且可以上传多个文件）：</label>
+            <input type="file" name="file" id="file" accept="image/*" multiple>
+        </p>
+        <p>
+            <label for="timestamp">隐藏的内容（隐藏域：实际存在，不显示）：</label>
+            <input type="hidden" name="timestamp" id="timestamp" value="123456">
+        </p>
+        <p>
+            <label for="">图像按钮控件:</label>
+            <input type="image" alt="Click me!" src="firefox-icon.png" width="50">
+        </p>
+        <p>
+            <label for="">进度条(无进度-进度值为0):</label>
+            <progress max="100"></progress>
+        </p>
+        <p>
+            <label for="">进度条(无进度-进度值为75):</label>
+            <progress max="100" value="75">75/100</progress>
+        </p>
+        <p>
+            <label for="">仪表(min-low low-high high-max):</label>
+            <meter value="30" min="0" max="100" low="33" high="66" optimum="80"></meter>
+        </p>
+        <p>
+            <label></label>
+            <button type="submit">提交</button>
+        </p>
+
 
     </form>
     
