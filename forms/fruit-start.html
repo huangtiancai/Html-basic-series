@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Favorite fruit start</title>
+    <!-- valid:有效的 invalid:无效的 validate：确认，验证，校验 -->
+    <style>
+        /* 选定任意无效的input  */
+      input:invalid {
+        border: 2px dashed red;
+      }
+      /* 选定任意有效的input  */
+      input:valid {
+        border: 2px solid black;
+      }
+    </style>
+</head>
+
+<body>
+    <form>
+      <div>
+        <label for="choose">required属性:</label>
+        <input id="choose" name="i_like" required pattern="[0-9]">
+      </div>
+      <div>
+        <label for="choose">校验输入文本的长度3-10:</label>
+        <input id="choose" name="i_like" required minlength="3" maxlength="10">
+      </div>
+      <div>
+        <label for="number">校验可选值的大小5-10:</label>
+        <input type="number" id="number" name="amount" min="5" max="10">
+      </div>
+      <div>
+        <button>Submit</button>
+      </div>
+      
+      
+    </form>
+    
+</body>
+
+</html>
